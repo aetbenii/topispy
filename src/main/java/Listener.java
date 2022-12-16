@@ -1,0 +1,41 @@
+public class Listener {
+    private int id;
+    private String listener_name;
+    private String email;
+    private String password;
+
+    public Listener() {
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getListener_name() {
+        return listener_name;
+    }
+
+    public void setListener_name(String listener_name) {
+        this.listener_name = listener_name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+}
