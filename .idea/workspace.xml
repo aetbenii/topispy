@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d3991a1-6c52-441e-aff3-b468b0405d0f" name="Changes" comment="projekt erstelltadf">
-      <change afterPath="$PROJECT_DIR$/resources/song.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Song.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gui/Input_Data.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gui/MainFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gui/Random_Songs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Artist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Song.java" afterDir="false" />
     </list>
-    <list id="1f1d8d28-834c-4a83-8a07-5a53dd00be03" name="Changes by Damian Leiter" comment="Changes by Damian Leiter">
-      <change beforePath="$PROJECT_DIR$/resources/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/config.xml" afterDir="false" />
-    </list>
+    <list id="1f1d8d28-834c-4a83-8a07-5a53dd00be03" name="Changes by Damian Leiter" comment="Changes by Damian Leiter" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,13 +25,8 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/resources/config.xml">
-      <ranges>
-        <range start1="8" end1="9" start2="8" end2="9" changelist="7d3991a1-6c52-441e-aff3-b468b0405d0f" />
-        <range start1="25" end1="26" start2="25" end2="29" changelist="1f1d8d28-834c-4a83-8a07-5a53dd00be03" />
-      </ranges>
-    </file>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.jdks/corretto-18.0.2/lib/src.zip!/java.base/java/lang/NoClassDefFoundError.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -56,7 +43,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "C:/Users/Benjamin/IdeaProjects/spacebenjo",
+    "last_opened_file_path": "C:/Users/Benjamin/IdeaProjects/topispy",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -115,7 +102,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671184150058</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="projekt erstelltadf">
+      <created>1671797570081</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671797570081</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Changes by Damian Leiter">
+      <created>1671797591184</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671797591184</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,6 +133,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="projekt erstellt" />
     <MESSAGE value="projekt erstelltadf" />
-    <option name="LAST_COMMIT_MESSAGE" value="projekt erstelltadf" />
+    <MESSAGE value="Changes by Damian Leiter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by Damian Leiter" />
   </component>
 </project>
