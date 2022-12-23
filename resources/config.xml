@@ -6,7 +6,7 @@
     <session-factory>
         <!-- Database connection properties - Driver, URL, user, password -->
         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
-        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/topispy</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/rateify</property>
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">Admin</property>
         <!-- Connection Pool Size -->

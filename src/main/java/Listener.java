@@ -1,5 +1,5 @@
 public class Listener {
-    private int id;
+    private int listenerid;
     private String listener_name;
     private String email;
     private String password;
@@ -7,12 +7,12 @@ public class Listener {
     public Listener() {
     }
 
-    public int getId() {
-        return id;
+    public int getListenerid() {
+        return listenerid;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setListenerid(int listenerid) {
+        this.listenerid = listenerid;
     }
 
     public String getListener_name() {

@@ -5,8 +5,10 @@ public class main {
         System.out.println("hallo");
 
         Listener l = new Listener();
-        l.setListener_name("beni");
-        l.setEmail("beni@email.com");
+
+
+        l.setListener_name("damian");
+        l.setEmail("damian@email.com");
         l.setPassword("123");
 
         //Get Session
