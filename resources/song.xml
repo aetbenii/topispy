@@ -6,7 +6,7 @@
     <class name="song" table="SONG">
         <id name="songid" type="int">
             <column name="SONGID" />
-            <generator class="increment"></generator>
+            <generator class="increment"/>
         </id>
 
         <property name="song_name" type="java.lang.String">
@@ -15,6 +15,9 @@
         <property name="album" type="java.lang.String">
             <column name="ALBUM" />
         </property>
+        <many-to-one name="listenerid" class="Listener">
+            <column name="listenerid" not-null="true"/>
+        </many-to-one>
     </class>
 </hibernate-mapping>
 

@@ -1,8 +1,12 @@
+import java.util.HashSet;
+import java.util.Set;
+
 public class Listener {
     private int listenerid;
     private String listener_name;
     private String email;
     private String password;
+    private Set<Song> songSet = new HashSet<>();
 
     public Listener() {
     }
@@ -37,5 +41,13 @@ public class Listener {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Set<Song> getSongSet() {
+        return songSet;
+    }
+
+    public void setSongSet(Set<Song> songSet) {
+        this.songSet = songSet;
     }
 }

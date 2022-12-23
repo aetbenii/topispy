@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d3991a1-6c52-441e-aff3-b468b0405d0f" name="Changes" comment="projekt erstelltadf">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Artist.java" afterDir="false" />
+    <list default="true" id="7d3991a1-6c52-441e-aff3-b468b0405d0f" name="Changes" comment="benjamin - changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/listener.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/listener.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/song.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resources/song.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Listener.java" afterDir="false" />
     </list>
     <list id="1f1d8d28-834c-4a83-8a07-5a53dd00be03" name="Changes by Damian Leiter" comment="Changes by Damian Leiter" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,18 +38,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "C:/Users/Benjamin/IdeaProjects/topispy",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Benjamin/IdeaProjects/topispy&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Benjamin\IdeaProjects\topispy\src\main\java" />
@@ -116,8 +117,18 @@
       <option name="project" value="LOCAL" />
       <updated>1671797591184</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="benjamin - changes">
+      <created>1671801424382</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671801424382</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.hibernate:hibernate-core" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -134,6 +145,7 @@
     <MESSAGE value="projekt erstellt" />
     <MESSAGE value="projekt erstelltadf" />
     <MESSAGE value="Changes by Damian Leiter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by Damian Leiter" />
+    <MESSAGE value="benjamin - changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="benjamin - changes" />
   </component>
 </project>
