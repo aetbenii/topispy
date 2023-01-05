@@ -6,13 +6,16 @@
     <class name="logik.Song" table="SONG">
 
         <id name="songid" type="int">
+
             <column name="SONGID" />
             <generator class="increment"/>
+
         </id>
 
         <property name="song_name" type="java.lang.String">
             <column name="SONG_NAME" />
         </property>
+
         <property name="album" type="java.lang.String">
             <column name="ALBUM" />
         </property>

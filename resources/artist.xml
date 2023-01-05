@@ -1,0 +1,24 @@
+<hibernate-mapping>
+    <class name="logik.Artist" table="ARTIST">
+
+        <id name="artistid" type="int">
+            <column name="ARTISTID" />
+            <generator class="increment"/>
+        </id>
+        <property name="artist_name" type="java.lang.String">
+            <column name="artist_name" />
+        </property>
+
+
+        <set name="song" table="CREATE" fetch="select">
+            <key column="artistid" />
+            <many-to-many class="logik.Song" column="songid" />
+
+        </set>
+        <set name="artistid" table="ARTIST" fetch="select">
+            <key column="songid" />
+            <many-to-many class="logik.Artist" column="artistid" />
+
+        </set>
+    </class>
+</hibernate-mapping>
