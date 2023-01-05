@@ -1,3 +1,5 @@
+package logik;
+
 public class Artist {
 
     private int artistid;

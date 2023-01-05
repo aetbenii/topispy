@@ -1,13 +1,21 @@
 package gui;
 
+import logik.HibernateUtil;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class MainFrame extends JFrame {
     public final int WIDTH = 1000;
     public final int HEIGHT = 700;
-    Random_Songs random_songs;
-    Input_Data input_data;
+
+    HibernateUtil hu = new HibernateUtil();
+    Panel_Random_Songs random_songs;
+    Panel_Input_Data input_data;
+    Panel_Rating rating;
+    Panel_Favorites favorites;
+    Panel_Login login;
+
     public MainFrame() {
         setSize(WIDTH, HEIGHT);
         setResizable(false);
@@ -15,13 +23,29 @@ public class MainFrame extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("rateify");
 
-        random_songs = new Random_Songs();
-        getContentPane().add(random_songs, BorderLayout.CENTER);
-        input_data = new Input_Data();
-        getContentPane().add(input_data, BorderLayout.NORTH);
+        login = new Panel_Login(this, hu);
+        getContentPane().add(login, BorderLayout.CENTER);
+        pack();
+
 
         setVisible(true);
     }
+
+    public void showOtherPane(){
+        input_data = new Panel_Input_Data();
+        getContentPane().add(input_data, BorderLayout.NORTH);
+        random_songs = new Panel_Random_Songs(this, hu);
+        getContentPane().add(random_songs, BorderLayout.WEST);
+        rating = new Panel_Rating(this);
+        getContentPane().add(rating, BorderLayout.CENTER);
+        favorites = new Panel_Favorites(this);
+        getContentPane().add(favorites, BorderLayout.EAST);
+        this.setFocusable(true);
+        this.requestFocusInWindow();
+        this.pack();
+    }
+
+
 
     public static void main(String[] args) {
         new MainFrame();

@@ -5,12 +5,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class Input_Data extends JPanel implements ActionListener {
-
+public class Panel_Input_Data extends JPanel implements ActionListener {
     ArrayList<JTextField> input = new ArrayList<>();
     JButton button = new JButton("input");
 
-    public Input_Data(){
+    public Panel_Input_Data(){
         create_inputs();
         add(button);
         button.addActionListener(this);
@@ -36,10 +35,10 @@ public class Input_Data extends JPanel implements ActionListener {
         if(e.getSource() == button){
             if(check_inputs()){
                 //hier weiter machen wenn alle felder befüllt sind
-                
+
             }
             //hier wenn eines leer sein sollte.
-
+            System.out.println("ich bin leer");
         }
     }
 

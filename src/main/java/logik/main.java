@@ -1,3 +1,5 @@
+package logik;
+
 import org.hibernate.Session;
 
 public class main {

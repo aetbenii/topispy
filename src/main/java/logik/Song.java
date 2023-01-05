@@ -1,3 +1,5 @@
+package logik;
+
 public class Song {
 
     private int songid;

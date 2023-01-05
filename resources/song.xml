@@ -3,7 +3,8 @@
         "https://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="song" table="SONG">
+    <class name="logik.Song" table="SONG">
+
         <id name="songid" type="int">
             <column name="SONGID" />
             <generator class="increment"/>
@@ -15,9 +16,14 @@
         <property name="album" type="java.lang.String">
             <column name="ALBUM" />
         </property>
-        <many-to-one name="listenerid" class="Listener">
-            <column name="listenerid" not-null="true"/>
-        </many-to-one>
+
+        <set name="artist" table="artist_song" fetch="select">
+                <key column="songid" />
+            <many-to-many class="logik.Artist" column="artistid" />
+
+        </set>
+
+
     </class>
 </hibernate-mapping>
 

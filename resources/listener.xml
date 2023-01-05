@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "https://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="Listener" table="LISTENER">
+    <class name="logik.Listener" table="LISTENER">
         <id name="listenerid" type="int">
             <column name="LISTENERID" />
             <generator class="increment"/>
@@ -20,7 +20,7 @@
             <key>
                 <column name="listenerid" not-null="true"/>
             </key>
-            <one-to-many class="Song"/>
+            <one-to-many class="logik.Song"/>
         </set>
     </class>
 </hibernate-mapping>
