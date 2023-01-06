@@ -21,11 +21,15 @@
         <!-- Dialect is required to let Hibernate know the Database Type, MySQL, Oracle etc
             Hibernate 4 automatically figure out Dialect from Database Connection Metadata -->
         <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-        <!-- mapping file, we can use Bean annotations too -->
-        <!--		<mapping resource="employee.xml" />-->
-        <mapping resource="listener.xml" class="logik.Listener"/>
-        <!-- es fehlt noch die klasse song -->
-        <mapping resource="song.xml" class="logik.Song"/>
 
+        <!-- Mapping -->
+        <mapping resource="listener.xml" class="logik.Listener"/>
+        <mapping resource="song.xml" class="logik.Song" />
+        <mapping resource="genre.xml" class="logik.Genre" />
+        <mapping resource="artist.xml" class="logik.Artist" />
+        <mapping resource="artist_song.xml" class="logik.artist_song" />
+        <mapping resource="genre_song.xml" class="logik.genre_song" />
+        <mapping resource="listener_song.xml" class="logik.listener_song" />
+        <mapping resource="listener_votes_song.xml" class="logik.listener_votes_song" />
     </session-factory>
 </hibernate-configuration>

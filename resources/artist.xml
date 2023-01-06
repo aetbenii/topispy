@@ -1,6 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "https://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class name="logik.Artist" table="ARTIST">
-
         <id name="artistid" type="int">
             <column name="ARTISTID" />
             <generator class="increment"/>
@@ -9,16 +11,9 @@
             <column name="artist_name" />
         </property>
 
-
-        <set name="song" table="CREATE" fetch="select">
-            <key column="artistid" />
-            <many-to-many class="logik.Song" column="songid" />
-
-        </set>
-        <set name="artistid" table="ARTIST" fetch="select">
-            <key column="songid" />
-            <many-to-many class="logik.Artist" column="artistid" />
-
+        <set name="songs" table="ARTIST_SONG" fetch="select">
+            <key column="ARTISTID" />
+            <many-to-many column="SONGID" class="logik.Song" />
         </set>
     </class>
 </hibernate-mapping>
