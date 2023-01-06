@@ -40,24 +40,10 @@ public class HibernateUtil {
         return sessionFactory;
     }
 
-    public List getListener(){
-        Session session = getsession();
-        Query query = session.createQuery("Select listener_name from listener");
-        HibernateUtil.getSessionFactory().close();
-        List listener = query.list();
-        return listener;
-    }
-
-    public List getsong(){
-        Session session = getsession();
-        Query query = session.createQuery("Select song_name from song");
-        HibernateUtil.getSessionFactory().close();
-        List songs = query.list();
-        return songs;
-    }
-
-    public Session getsession(){
-        return HibernateUtil.getSessionFactory().getCurrentSession();
+    public static Session getSession() throws Error  {
+      if(session != null) {
+          return session;
+      } throw new Error("Session invalid!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
     }
 }
 

@@ -23,7 +23,7 @@ public class Panel_Random_Songs extends JPanel implements ActionListener {
         BorderLayout bl = new BorderLayout();
         this.setLayout(bl);
         ArrayList<String> songs = new ArrayList<>();
-        songs.add("muug");
+        songs.add("muuglkgkljhöljhg");
         for (int i = 0; i < 100; i++) {
             songs.add("fisch");
         }
@@ -43,13 +43,15 @@ public class Panel_Random_Songs extends JPanel implements ActionListener {
         info = new JPanel();
         info.setPreferredSize(new Dimension(100, 225));
         info.setLayout(new GridLayout(2,1,20,20));
+        info.setBackground(Color.white);
         info_song = new ArrayList<>();
         info_song.add(new JLabel("Song Name: "));
         info_song.add(new JLabel("Song Album: "));
         info.add(info_song.get(0));
         info.add(info_song.get(1));
 
-
+        //In der Liste das ranking anzeigen lassen.
+        list.setSelectedIndex(0);
 
 
         add(sp, BorderLayout.NORTH);
@@ -64,12 +66,12 @@ public class Panel_Random_Songs extends JPanel implements ActionListener {
             if(index >= 0){
                 System.out.println("index selected: " + index);
                 info_song.get(0).setText("Song Name: " + index);
-                Panel_Rating.test.setText(" "+index);
             }
             String s = (String) list.getSelectedValue();
             if(s != null){
                 System.out.println("Value Selected: " + s);
                 info_song.get(1).setText("Song Album: " + s);
+                Panel_Rating.test.setText(" "+s);
             }
         }
     }

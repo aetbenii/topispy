@@ -16,11 +16,10 @@
         <property name="password" type="java.lang.String">
             <column name="PASSWORD" />
         </property>
-        <set name="songSet" table="SONG" fetch="select">
-            <key>
-                <column name="listenerid" not-null="true"/>
-            </key>
-            <one-to-many class="logik.Song"/>
+
+        <set name="songs" table="LISTENER_SONG" fetch="select">
+            <key column="LISTENERID" not-null="true" />
+            <many-to-many column="SONGID" class="logik.Song" />
         </set>
     </class>
 </hibernate-mapping>

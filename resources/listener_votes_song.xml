@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "https://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="logik.listener_votes_song" table="LISTENER_VOTES_SONG">
+        <id name="listenerVotesSongId" type="int">
+            <column name="listener_votes_songid" />
+            <generator class="increment"/>
+        </id>
+
+        <property name="upvote" type="int">
+            <column name="UPVOTE" />
+        </property>
+        <property name="downvote" type="int">
+            <column name="DOWNVOTE" />
+        </property>
+
+        <many-to-one name="listener" class="logik.Listener" column="LISTENERID" />
+        <many-to-one name="song" class="logik.Song" column="SONGID" />
+    </class>
+</hibernate-mapping>

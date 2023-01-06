@@ -32,7 +32,7 @@ public class MainFrame extends JFrame {
     }
 
     public void showOtherPane(){
-        input_data = new Panel_Input_Data();
+        input_data = new Panel_Input_Data(this);
         getContentPane().add(input_data, BorderLayout.NORTH);
         random_songs = new Panel_Random_Songs(this, hu);
         getContentPane().add(random_songs, BorderLayout.WEST);
@@ -43,6 +43,14 @@ public class MainFrame extends JFrame {
         this.setFocusable(true);
         this.requestFocusInWindow();
         this.pack();
+    }
+
+    public void removeAllPane(){
+        getContentPane().removeAll();
+        getContentPane().add(input_data, BorderLayout.NORTH);
+        this.setFocusable(true);
+        this.requestFocusInWindow();
+        this.repaint();
     }
 
 

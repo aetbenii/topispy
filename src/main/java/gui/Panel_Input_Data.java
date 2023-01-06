@@ -1,5 +1,7 @@
 package gui;
 
+import org.jboss.jandex.Main;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -9,7 +11,9 @@ public class Panel_Input_Data extends JPanel implements ActionListener {
     ArrayList<JTextField> input = new ArrayList<>();
     JButton button = new JButton("input");
 
-    public Panel_Input_Data(){
+    MainFrame frame;
+    public Panel_Input_Data(MainFrame frame){
+        this.frame = frame;
         create_inputs();
         add(button);
         button.addActionListener(this);
@@ -39,6 +43,7 @@ public class Panel_Input_Data extends JPanel implements ActionListener {
             }
             //hier wenn eines leer sein sollte.
             System.out.println("ich bin leer");
+            frame.removeAllPane();
         }
     }
 

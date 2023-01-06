@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "https://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="logik.genre_song" table="GENRE_SONG">
+        <id name="genreSongId" type="int">
+            <column name="GENRE_SONGID" />
+            <generator class="increment"/>
+        </id>
+
+        <many-to-one name="genre" class="logik.Genre" column="GENREID"/>
+        <many-to-one name="song" class="logik.Song" column="songid"/>
+    </class>
+</hibernate-mapping>

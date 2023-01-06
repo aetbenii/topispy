@@ -20,13 +20,20 @@
             <column name="ALBUM" />
         </property>
 
-        <set name="artist" table="artist_song" fetch="select">
-                <key column="songid" />
-            <many-to-many class="logik.Artist" column="artistid" />
-
+        <set name="listeners" table="LISTENER_SONG" fetch="select">
+            <key column="SONGID" />
+            <many-to-many column="LISTENERID" class="logik.Listener" />
         </set>
 
+        <set name="artists" table="LISTENER_SONG" fetch="select">
+            <key column="SONGID" />
+            <many-to-many column="ARTISTID" class="logik.Artist" />
+        </set>
 
+        <set name="genres" table="LISTENER_SONG" fetch="select">
+            <key column="SONGID" />
+            <many-to-many column="GENREID" class="logik.Genre" />
+        </set>
     </class>
 </hibernate-mapping>
 
