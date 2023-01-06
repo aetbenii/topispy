@@ -14,8 +14,9 @@ public class HibernateUtil {
 
     //XML based configuration
     private static SessionFactory sessionFactory;
+    private static Session session;
 
-    private static SessionFactory buildSessionFactory() {
+    public static void buildSessionFactory() {
         try {
             // main.Create the SessionFactory from hibernate.cfg.xml
             Configuration configuration = new Configuration();
@@ -26,8 +27,7 @@ public class HibernateUtil {
             System.out.println("Hibernate serviceRegistry created");
 
             SessionFactory sessionFactory = configuration.buildSessionFactory(serviceRegistry);
-
-            return sessionFactory;
+            session = sessionFactory.getCurrentSession();
         }
         catch (Throwable ex) {
             // Make sure you log the exception, as it might be swallowed
@@ -35,9 +35,9 @@ public class HibernateUtil {
             throw new ExceptionInInitializerError(ex);
         }
     }
-    public static SessionFactory getSessionFactory() {
-        if(sessionFactory == null) sessionFactory = buildSessionFactory();
-        return sessionFactory;
+
+    public static void close(){
+        sessionFactory.close();
     }
 
     public static Session getSession() throws Error  {
@@ -45,5 +45,6 @@ public class HibernateUtil {
           return session;
       } throw new Error("Session invalid!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
     }
+
 }
 

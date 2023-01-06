@@ -8,7 +8,7 @@
             <generator class="increment"/>
         </id>
         <property name="artist_name" type="java.lang.String">
-            <column name="artist_name" />
+            <column name="ARTIST_NAME" />
         </property>
 
         <set name="songs" table="ARTIST_SONG" fetch="select">

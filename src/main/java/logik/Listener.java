@@ -1,6 +1,5 @@
 package logik;
 
-import java.util.HashSet;
 import java.util.Set;
 
 public class Listener {
@@ -8,7 +7,7 @@ public class Listener {
     private String listener_name;
     private String email;
     private String password;
-    private Set<Song> songSet = new HashSet<>();
+    private Set<Song> songs;
 
     public Listener() {
     }
@@ -45,11 +44,11 @@ public class Listener {
         this.password = password;
     }
 
-    public Set<Song> getSongSet() {
-        return songSet;
+    public Set<Song> getSongs() {
+        return songs;
     }
 
-    public void setSongSet(Set<Song> songSet) {
-        this.songSet = songSet;
+    public void setSongs(Set<Song> songSet) {
+        this.songs = songSet;
     }
 }

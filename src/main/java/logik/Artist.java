@@ -6,6 +6,7 @@ public class Artist {
 
     private int artistid;
     private String artist_name;
+    private Set<Song> songs;
 
     public Artist(){
 
