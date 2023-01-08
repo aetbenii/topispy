@@ -1,11 +1,22 @@
 package logik;
 
+import java.util.List;
+
 public class listener_votes_song {
     private int listenerVotesSongId;
     private Listener listener;
     private Song song;
     private int upvote, downvote;
 
+    public listener_votes_song(Listener listener, Song song, int upvote, int downvote) {
+        this.listener = listener;
+        this.song = song;
+        this.upvote = upvote;
+        this.downvote = downvote;
+    }
+
+    public listener_votes_song() {
+    }
 
     public int getListenerVotesSongId() {
         return listenerVotesSongId;

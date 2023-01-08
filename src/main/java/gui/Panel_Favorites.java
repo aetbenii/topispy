@@ -1,28 +1,40 @@
 package gui;
 
+import logik.Song;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
 public class Panel_Favorites extends JPanel {
 
-    logik.Song song;
-    JList list;
+    static MainFrame frame;
+    public static JList list;
+    public static ArrayList<Song> songs;
     public Panel_Favorites(MainFrame frame){
+        this.frame = frame;
         //setBackground(Color.yellow);
         setPreferredSize(new Dimension(frame.WIDTH/3, frame.HEIGHT));
         setLayout(new BorderLayout());
-        ArrayList<String> songs = new ArrayList<>();
-        songs.add("muug");
 
-        list = new JList(songs.toArray());
+        createList();
+
         JScrollPane sp = new JScrollPane();
         sp.setViewportView(list);
+
 
         add(sp, BorderLayout.CENTER);
     }
 
-    public void reload(){
-        this.repaint();
+    public static void createList(){
+        try{
+            songs = frame.songDb.listenerlikedsongs(frame.listener.getListenerid(), 1);
+            System.out.println("ha");
+        }catch (Throwable ex){
+            System.out.println("fehler");
+        }
+        if(songs != null){
+            list = new JList(songs.toArray());
+        }
     }
 }

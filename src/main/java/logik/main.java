@@ -1,17 +1,21 @@
 package logik;
 
+import db.SongDb;
 import org.hibernate.Session;
 
+import java.util.ArrayList;
+
 public class main {
+
     public static void main(String[] args) {
-        System.out.println("hallo");
-
-        Listener l = new Listener();
 
 
-        l.setListener_name("kevin");
-        l.setEmail("kevin@email.com");
-        l.setPassword("123");
+        //Listener l = new Listener();
+
+
+        //l.setListener_name("beni");
+        //l.setEmail("kevin@email.com");
+        //l.setPassword("123");
 
         HibernateUtil.buildSessionFactory();
         //Get Session
@@ -23,8 +27,9 @@ public class main {
         System.out.println(neger.getEmail());
 
 
+
         //Save the Model object
-        session.save(l);
+       // session.save(l);
 //		session.save(cart);
 //		session.save(item1);
 //		session.save(item2);

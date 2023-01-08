@@ -1,6 +1,7 @@
 package gui;
 
 import logik.HibernateUtil;
+import logik.Listener;
 import org.jboss.jandex.Main;
 
 import javax.swing.*;
@@ -8,18 +9,24 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Panel_Login extends JPanel implements ActionListener {
 
+    Listener listener;
+    db.ListenerDb listenerDb;
     ArrayList<JTextField> input = new ArrayList<>();
     JButton btn = new JButton("Login");
     JFrame ourframe;
     MainFrame frame;
-    public Panel_Login(MainFrame frame, HibernateUtil hu){
+    public Panel_Login(MainFrame frame){
+        this.listener = frame.listener = new Listener();
         this.frame = frame;
         JLabel title = new JLabel("LOGIN");
         add(title);
         create_inputs();
+        input.get(0).setText("benny@email.com");
+        input.get(1).setText("abc");
         add(btn);
         btn.addActionListener(this);
 
@@ -43,13 +50,15 @@ public class Panel_Login extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == btn){
             if(check_inputs()){
-                //wenn true
-
+                frame.listener = listenerDb.getListener(input.get(0).getText(), input.get(1).getText());
+                if(frame.listener != null){
+                    frame.getContentPane().remove(this);
+                    frame.showOtherPane();
+                    //frame.likedsongs = frame.songDb.listenerlikedsongs(listener.getListenerid(), 1);
+                }
             }else{
                 // wenn falsch
-                frame.getContentPane().remove(this);
-                frame.showOtherPane();
-                System.out.println("leer");
+                System.out.println("passwort falsch");
             }
         }
     }

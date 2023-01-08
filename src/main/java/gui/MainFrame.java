@@ -1,15 +1,23 @@
 package gui;
 
+import db.SongDb;
 import logik.HibernateUtil;
+import logik.Listener;
+import logik.Song;
+import org.hibernate.Session;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
-public class MainFrame extends JFrame {
+public class MainFrame extends JFrame{
     public final int WIDTH = 1000;
     public final int HEIGHT = 700;
-
-    HibernateUtil hu = new HibernateUtil();
+    Listener listener;
+    HibernateUtil hibernateUtil = new HibernateUtil();
+    db.SongDb songDb;
+    ArrayList<Song> songs;
+    ArrayList<Song> likedsongs;
     Panel_Random_Songs random_songs;
     Panel_Input_Data input_data;
     Panel_Rating rating;
@@ -23,18 +31,28 @@ public class MainFrame extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle("rateify");
 
-        login = new Panel_Login(this, hu);
-        getContentPane().add(login, BorderLayout.CENTER);
+        //db
+        hibernateUtil.buildSessionFactory();
+        songDb = new SongDb();
+        songs = songDb.getAll();
+
+
+        login = new Panel_Login(this);
+        if(listener != null){
+            getContentPane().add(login, BorderLayout.CENTER);
+            System.out.println(listener.getListenerid());
+
+            System.out.println(likedsongs);
+        }
+
         pack();
-
-
         setVisible(true);
     }
 
     public void showOtherPane(){
-        input_data = new Panel_Input_Data(this);
-        getContentPane().add(input_data, BorderLayout.NORTH);
-        random_songs = new Panel_Random_Songs(this, hu);
+        //input_data = new Panel_Input_Data(this);
+        //getContentPane().add(input_data, BorderLayout.NORTH);
+        random_songs = new Panel_Random_Songs(this);
         getContentPane().add(random_songs, BorderLayout.WEST);
         rating = new Panel_Rating(this);
         getContentPane().add(rating, BorderLayout.CENTER);

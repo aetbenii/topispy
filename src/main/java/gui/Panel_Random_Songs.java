@@ -1,36 +1,41 @@
 package gui;
 
+import db.SongDb;
 import logik.HibernateUtil;
+import logik.Song;
 
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Array;
 import java.util.ArrayList;
 
 public class Panel_Random_Songs extends JPanel implements ActionListener {
-
-    logik.Song song;
+    db.SongDb songDb;
+    MainFrame frame;
     JButton btn;
     JList list;
     JPanel info;
     ArrayList<JLabel> info_song;
+    public static String[] songinfo;
+    public ArrayList<Song> songs;
+    public static int index;
 
-    public Panel_Random_Songs(MainFrame frame, HibernateUtil hu){
+    public Panel_Random_Songs(MainFrame frame){
         //setBackground(Color.RED);
+        this.songDb = frame.songDb = new SongDb();
+        this.frame = frame;
+        this.songs = frame.songs;
         setPreferredSize(new Dimension(frame.WIDTH/3, frame.HEIGHT));
         BorderLayout bl = new BorderLayout();
         this.setLayout(bl);
-        ArrayList<String> songs = new ArrayList<>();
-        songs.add("muuglkgkljhöljhg");
-        for (int i = 0; i < 100; i++) {
-            songs.add("fisch");
-        }
+        //Songs in Liste
+
+        createList();
 
 
-
-        list = new JList(songs.toArray());
 
         JScrollPane sp = new JScrollPane();
         sp.setPreferredSize(new Dimension(100, 450));
@@ -39,6 +44,7 @@ public class Panel_Random_Songs extends JPanel implements ActionListener {
         btn = new JButton("Check");
         btn.setPreferredSize(new Dimension(100, 25));
         btn.addActionListener(this);
+        btn.setBackground(Color.lightGray);
 
         info = new JPanel();
         info.setPreferredSize(new Dimension(100, 225));
@@ -51,7 +57,6 @@ public class Panel_Random_Songs extends JPanel implements ActionListener {
         info.add(info_song.get(1));
 
         //In der Liste das ranking anzeigen lassen.
-        list.setSelectedIndex(0);
 
 
         add(sp, BorderLayout.NORTH);
@@ -62,19 +67,28 @@ public class Panel_Random_Songs extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == btn){
-            int index = list.getSelectedIndex();
+            index = list.getSelectedIndex();
+            songinfo = songs.get(index).toString().split("-");
+            System.out.println(songinfo[1]);
+
             if(index >= 0){
-                System.out.println("index selected: " + index);
-                info_song.get(0).setText("Song Name: " + index);
-            }
-            String s = (String) list.getSelectedValue();
-            if(s != null){
-                System.out.println("Value Selected: " + s);
-                info_song.get(1).setText("Song Album: " + s);
-                Panel_Rating.test.setText(" "+s);
+                info_song.get(0).setText("Song Name: " + songinfo[0]);
+                info_song.get(1).setText("Song Album: " + songinfo[1]);
+                Panel_Rating.test.setText(" "+songinfo[0]);
             }
         }
     }
 
     //Lieder die geupvotet werden sollen in der Liste der Favorites
+    //create list for all songs
+    public void createList(){
+        try{
+            songs = songDb.getAll();
+        }catch (Throwable ex){
+            System.out.println("fehler");
+        }
+        if(songs != null){
+            list = new JList(songs.toArray());
+        }
+    }
 }

@@ -15,17 +15,17 @@
             <column name="ALBUM" />
         </property>
 
-        <set name="listeners" table="LISTENER_SONG" fetch="select">
+        <set name="listeners" table="LISTENER_SONG" cascade="all" fetch="select">
             <key column="SONGID" />
             <many-to-many column="LISTENERID" class="logik.Listener" />
         </set>
 
-        <set name="artists" table="LISTENER_SONG" fetch="select">
+        <set name="artists" table="LISTENER_SONG" cascade="all" fetch="select">
             <key column="SONGID" />
             <many-to-many column="ARTISTID" class="logik.Artist" />
         </set>
 
-        <set name="genres" table="LISTENER_SONG" fetch="select">
+        <set name="genres" table="LISTENER_SONG" cascade="all" fetch="select">
             <key column="SONGID" />
             <many-to-many column="GENREID" class="logik.Genre" />
         </set>

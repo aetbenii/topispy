@@ -28,6 +28,7 @@ public class HibernateUtil {
 
             SessionFactory sessionFactory = configuration.buildSessionFactory(serviceRegistry);
             session = sessionFactory.getCurrentSession();
+            session.beginTransaction();
         }
         catch (Throwable ex) {
             // Make sure you log the exception, as it might be swallowed

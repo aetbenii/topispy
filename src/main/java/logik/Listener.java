@@ -9,6 +9,12 @@ public class Listener {
     private String password;
     private Set<Song> songs;
 
+    public Listener(String listener_name, String email, String password) {
+        this.listener_name = listener_name;
+        this.email = email;
+        this.password = password;
+    }
+
     public Listener() {
     }
 
@@ -50,5 +56,9 @@ public class Listener {
 
     public void setSongs(Set<Song> songSet) {
         this.songs = songSet;
+    }
+
+    public String toString(){
+        return this.listenerid +" "+ this.listener_name+" "+this.email+" "+this.password;
     }
 }

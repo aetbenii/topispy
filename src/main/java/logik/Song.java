@@ -70,4 +70,8 @@ public class Song {
     public void setGenres(Set<Genre> genres) {
         this.genres = genres;
     }
+
+    public String toString(){
+        return this.song_name+" - "+this.album;
+    }
 }

@@ -21,4 +21,10 @@ public class ListenerVotesSongDb {
             throw new Error("Email/password is incorrect!");
         }
     }
+
+    public static void voting(listener_votes_song lvs){
+        Session session = HibernateUtil.getSession();
+        session.save(lvs);
+        session.getTransaction().commit();
+    }
 }

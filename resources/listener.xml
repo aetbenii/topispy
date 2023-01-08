@@ -18,7 +18,7 @@
             <column name="PASSWORD" />
         </property>
 
-        <set name="songs" table="LISTENER_SONG" fetch="select">
+        <set name="songs" table="LISTENER_SONG" cascade="all" fetch="select">
             <key column="LISTENERID" not-null="true" />
             <many-to-many column="SONGID" class="logik.Song" />
         </set>

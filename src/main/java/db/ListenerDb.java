@@ -14,7 +14,7 @@ public class ListenerDb
         query.setParameter("email", email);
         query.setParameter("password", password);
 
-        Object resultObj = query.uniqueResult();
+        Object resultObj = query.setMaxResults(1).uniqueResult();
         if (resultObj != null) {
             return (Listener) session.get(Listener.class, Integer.parseInt(resultObj.toString()));
         } else {
@@ -27,5 +27,6 @@ public class ListenerDb
         session.save(listener);
         session.getTransaction().commit();
     }
+
 
 }

@@ -26,4 +26,23 @@ public class SongDb {
             throw new Error("Error songs :(");
         }
     }
+
+    public static ArrayList<Song> listenerlikedsongs(int listenerid, int upvote){
+        Session session = HibernateUtil.getSession();
+        SQLQuery query = session.createSQLQuery("SELECT song.songid FROM listener_votes_song JOIN song ON song.songid = listener_votes_song.songid JOIN listener ON listener.listenerid = listener_votes_song.listenerid WHERE listener.listenerid = :listenerid and listener_votes_song.upvote = :upvote\n");
+        query.setParameter("listenerid", listenerid);
+        query.setParameter("upvote", upvote);
+        List<Object> results = query.list();
+        ArrayList<Song> songs = new ArrayList<>();
+
+        if (results != null) {
+            for (Object id : results) {
+                songs.add((Song) session.get(Song.class, Integer.parseInt(id.toString())));
+            }
+
+            return songs;
+        } else {
+            throw new Error("Error songs :(");
+        }
+    }
 }
