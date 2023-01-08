@@ -3,18 +3,21 @@ package gui;
 import org.jboss.jandex.Main;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class Panel_Input_Data extends JPanel implements ActionListener {
     ArrayList<JTextField> input = new ArrayList<>();
-    JButton button = new JButton("input");
+    JButton button = new JButton("Highest Votes");
 
     MainFrame frame;
     public Panel_Input_Data(MainFrame frame){
         this.frame = frame;
-        create_inputs();
+        this.setLayout(new FlowLayout(FlowLayout.LEFT));
+        //create_inputs();
+
         add(button);
         button.addActionListener(this);
     }

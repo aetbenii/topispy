@@ -50,8 +50,8 @@ public class MainFrame extends JFrame{
     }
 
     public void showOtherPane(){
-        //input_data = new Panel_Input_Data(this);
-        //getContentPane().add(input_data, BorderLayout.NORTH);
+        input_data = new Panel_Input_Data(this);
+        getContentPane().add(input_data, BorderLayout.NORTH);
         random_songs = new Panel_Random_Songs(this);
         getContentPane().add(random_songs, BorderLayout.WEST);
         rating = new Panel_Rating(this);

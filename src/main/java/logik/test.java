@@ -23,7 +23,9 @@ public class test {
 //
         db.ListenerVotesSongDb listenerVotesSongDb = new ListenerVotesSongDb();
 //
-        ArrayList<Song> songies = songDb.listenerlikedsongs(7,1);
+        listener_votes_song lvs = new listener_votes_song(l, songs.get(0),1,0 );
+        listenerVotesSongDb.voting(lvs);
+        ArrayList<Song> songies = songDb.listenerlikedsongs(1,1);
         System.out.println(songies);
 
     }

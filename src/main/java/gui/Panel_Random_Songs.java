@@ -83,7 +83,7 @@ public class Panel_Random_Songs extends JPanel implements ActionListener {
     //create list for all songs
     public void createList(){
         try{
-            songs = songDb.getAll();
+            songs = songDb.notLikedSongs(frame.listener.getListenerid());
         }catch (Throwable ex){
             System.out.println("fehler");
         }

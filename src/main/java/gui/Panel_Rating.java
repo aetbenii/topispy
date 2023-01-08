@@ -26,14 +26,14 @@ public class Panel_Rating extends JPanel implements ActionListener {
         setBackground(Color.white);
         setPreferredSize(new Dimension(frame.WIDTH/3, frame.HEIGHT));
         setLayout(new GridLayout(3,3,20,20));
-        test = new JLabel("TEST", SwingConstants.CENTER);
+        test = new JLabel(frame.songs.get(0)+" ", SwingConstants.CENTER);
         listenerVotesSongDb = new ListenerVotesSongDb();
 
         upvote = new JButton("Upvote");
-        upvote.setBackground(Color.lightGray);
+        upvote.setBackground(Color.green);
         upvote.addActionListener(this);
         downvote = new JButton("Downvote");
-        downvote.setBackground(Color.lightGray);
+        downvote.setBackground(Color.red);
         downvote.addActionListener(this);
 
         add(upvote);
