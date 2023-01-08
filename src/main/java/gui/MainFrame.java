@@ -23,6 +23,7 @@ public class MainFrame extends JFrame{
     Panel_Rating rating;
     Panel_Favorites favorites;
     Panel_Login login;
+    JPanel cs;
 
     public MainFrame() {
         setSize(WIDTH, HEIGHT);

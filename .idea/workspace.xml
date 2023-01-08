@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d3991a1-6c52-441e-aff3-b468b0405d0f" name="Changes" comment="gg">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/db/SongDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/db/SongDb.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/MainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/Panel_Input_Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Panel_Input_Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/Panel_Random_Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Panel_Random_Songs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/Panel_Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Panel_Rating.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logik/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logik/test.java" afterDir="false" />
     </list>
     <list id="1f1d8d28-834c-4a83-8a07-5a53dd00be03" name="Changes by Damian Leiter" comment="Changes by Damian Leiter" />
     <list id="401c329d-f05f-412c-b370-60529e333851" name="Changes by Kevin" comment="Changes by Kevin" />
@@ -193,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673047155191</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="gg">
+      <created>1673212624442</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1673212624443</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,10 +223,10 @@
     <MESSAGE value="benjamin - changes" />
     <MESSAGE value="benjamin - changes - gui halb fertig" />
     <MESSAGE value="Changes by Leiter" />
-    <MESSAGE value="gg" />
     <MESSAGE value="Changes by Kevin" />
     <MESSAGE value="Changes by Max" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by Max" />
+    <MESSAGE value="gg" />
+    <option name="LAST_COMMIT_MESSAGE" value="gg" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

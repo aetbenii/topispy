@@ -47,6 +47,7 @@ public class Panel_Input_Data extends JPanel implements ActionListener {
             //hier wenn eines leer sein sollte.
             System.out.println("ich bin leer");
             frame.removeAllPane();
+
         }
     }
 
