@@ -61,8 +61,10 @@ public class Panel_Random_Songs extends JPanel implements ActionListener {
         info_song = new ArrayList<>();
         info_song.add(new JLabel("Song Name: "));
         info_song.add(new JLabel("Song Album: "));
+
         info.add(info_song.get(0));
         info.add(info_song.get(1));
+
 
         //In der Liste das ranking anzeigen lassen.
 
@@ -78,6 +80,7 @@ public class Panel_Random_Songs extends JPanel implements ActionListener {
             index = list.getSelectedIndex();
             songinfo = songs.get(index).toString().split("-");
             System.out.println(songinfo[1]);
+
 
             if(index >= 0){
                 info_song.get(0).setText("Song Name: " + songinfo[0]);
