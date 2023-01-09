@@ -6,6 +6,7 @@ import logik.Song;
 
 import javax.swing.*;
 import javax.swing.border.Border;
+import javax.swing.plaf.basic.BasicScrollBarUI;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,12 +21,12 @@ public class Panel_Random_Songs extends JPanel implements ActionListener {
     JPanel info;
     ArrayList<JLabel> info_song;
     public static String[] songinfo;
-    public ArrayList<Song> songs;
+    public static ArrayList<Song> songs;
     public static int index;
 
     public Panel_Random_Songs(MainFrame frame){
         //setBackground(Color.RED);
-        this.songDb = frame.songDb = new SongDb();
+        //this.songDb = frame.songDb = new SongDb();
         this.frame = frame;
         this.songs = frame.songs;
         setPreferredSize(new Dimension(frame.WIDTH/3, frame.HEIGHT));
@@ -40,6 +41,13 @@ public class Panel_Random_Songs extends JPanel implements ActionListener {
         JScrollPane sp = new JScrollPane();
         sp.setPreferredSize(new Dimension(100, 450));
         sp.setViewportView(list);
+        sp.getVerticalScrollBar().setUI(new BasicScrollBarUI() {
+            @Override
+            protected void configureScrollBarColors() {
+                this.thumbColor = Color.lightGray;
+            }
+        });
+
 
         btn = new JButton("Check");
         btn.setPreferredSize(new Dimension(100, 25));

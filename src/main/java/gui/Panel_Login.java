@@ -15,7 +15,9 @@ public class Panel_Login extends JPanel implements ActionListener {
 
     Listener listener;
     db.ListenerDb listenerDb;
-    ArrayList<JTextField> input = new ArrayList<>();
+
+    public JTextField email;
+    public JPasswordField pw;
     JButton btn = new JButton("Login");
     JFrame ourframe;
     MainFrame frame;
@@ -23,34 +25,38 @@ public class Panel_Login extends JPanel implements ActionListener {
         this.listener = frame.listener = new Listener();
         this.frame = frame;
         JLabel title = new JLabel("LOGIN");
+
         add(title);
         create_inputs();
-        input.get(0).setText("benny@email.com");
-        input.get(1).setText("abc");
-        add(btn);
-        btn.addActionListener(this);
+        email.setText("damian@email.com");
+        pw.setText("1234");
 
+        btn.addActionListener(this);
+        btn.setBackground(Color.lightGray);
+
+        //Elemente zum JPanel hinzufügen.
+
+        add(btn);
     }
 
     public void create_inputs(){
-        for (int i = 0; i < 2; i++) {
-            input.add(new JTextField("",15));
-            add(input.get(i));
-        }
+        email = new JTextField("", 20);
+        pw = new JPasswordField("", 20);
+        add(email);
+        add(pw);
     }
 
     public boolean check_inputs(){
-        for (int i = 0; i < input.size(); i++) {
-            if(input.get(i).getText().length() < 1) return false;
-        }
+        if(email.getText().length()<1 && pw.getText().length() < 1) return false;
         return true;
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == btn){
+
             if(check_inputs()){
-                frame.listener = listenerDb.getListener(input.get(0).getText(), input.get(1).getText());
+                frame.listener = listenerDb.getListener(email.getText(), String.valueOf(pw.getPassword()));
                 if(frame.listener != null){
                     frame.getContentPane().remove(this);
                     frame.showOtherPane();

@@ -29,7 +29,7 @@ public class Panel_Favorites extends JPanel {
     public static void createList(){
         try{
             songs = frame.songDb.listenerlikedsongs(frame.listener.getListenerid(), 1);
-            System.out.println("ha");
+
         }catch (Throwable ex){
             System.out.println("fehler");
         }

@@ -11,13 +11,13 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class MainFrame extends JFrame{
-    public final int WIDTH = 1000;
+    public final int WIDTH = 1200;
     public final int HEIGHT = 700;
     Listener listener;
     HibernateUtil hibernateUtil = new HibernateUtil();
     db.SongDb songDb;
     ArrayList<Song> songs;
-    ArrayList<Song> likedsongs;
+    //ArrayList<Song> likedsongs;
     Panel_Random_Songs random_songs;
     Panel_Input_Data input_data;
     Panel_Rating rating;
@@ -34,16 +34,14 @@ public class MainFrame extends JFrame{
 
         //db
         hibernateUtil.buildSessionFactory();
-        songDb = new SongDb();
-        songs = songDb.getAll();
+        //songDb = new SongDb();
+
 
 
         login = new Panel_Login(this);
         if(listener != null){
             getContentPane().add(login, BorderLayout.CENTER);
-            System.out.println(listener.getListenerid());
-
-            System.out.println(likedsongs);
+            songs = songDb.notLikedSongs(listener.getListenerid());
         }
 
         pack();
@@ -51,8 +49,8 @@ public class MainFrame extends JFrame{
     }
 
     public void showOtherPane(){
-        input_data = new Panel_Input_Data(this);
-        getContentPane().add(input_data, BorderLayout.NORTH);
+        //input_data = new Panel_Input_Data(this);
+        //getContentPane().add(input_data, BorderLayout.NORTH);
         random_songs = new Panel_Random_Songs(this);
         getContentPane().add(random_songs, BorderLayout.WEST);
         rating = new Panel_Rating(this);

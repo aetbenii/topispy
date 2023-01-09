@@ -26,20 +26,23 @@ public class Panel_Rating extends JPanel implements ActionListener {
         setBackground(Color.white);
         setPreferredSize(new Dimension(frame.WIDTH/3, frame.HEIGHT));
         setLayout(new GridLayout(3,3,20,20));
-        test = new JLabel(frame.songs.get(0)+" ", SwingConstants.CENTER);
+        test = new JLabel(Panel_Random_Songs.songs.get(0) + " ", SwingConstants.CENTER);
         listenerVotesSongDb = new ListenerVotesSongDb();
 
+        //Button für Upvoten
         upvote = new JButton("Upvote");
-        upvote.setBackground(Color.green);
+        upvote.setBackground(new Color(191, 128, 255));
         upvote.addActionListener(this);
+
+        //Button für Downvoten
         downvote = new JButton("Downvote");
-        downvote.setBackground(Color.red);
+        downvote.setBackground(new Color(191, 128, 255));
         downvote.addActionListener(this);
 
+        //Alle Elemente zum JPanel hinufügen
         add(upvote);
         add(test);
         add(downvote);
-
     }
 
     @Override
@@ -47,7 +50,7 @@ public class Panel_Rating extends JPanel implements ActionListener {
         if(e.getSource() == upvote){
             if(frame.listener != null){
                 Listener l = listenerDb.getListener(frame.listener.getEmail(), frame.listener.getPassword());
-                lvs = new listener_votes_song(l, frame.songs.get(Panel_Random_Songs.index) , 1, 0);
+                lvs = new listener_votes_song(l, Panel_Random_Songs.songs.get(0) , 1, 0);
                 listenerVotesSongDb.voting(lvs);
                 upvote.setEnabled(false);
                 downvote.setEnabled(false);
