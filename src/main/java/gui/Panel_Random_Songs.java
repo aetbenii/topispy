@@ -28,7 +28,6 @@ public class Panel_Random_Songs extends JPanel implements ActionListener {
         //setBackground(Color.RED);
         //this.songDb = frame.songDb = new SongDb();
         this.frame = frame;
-        this.songs = frame.songs;
         setPreferredSize(new Dimension(frame.WIDTH/3, frame.HEIGHT));
         BorderLayout bl = new BorderLayout();
         this.setLayout(bl);
@@ -78,6 +77,9 @@ public class Panel_Random_Songs extends JPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == btn){
             index = list.getSelectedIndex();
+            //TEST
+            System.out.println(index);
+            //
             songinfo = songs.get(index).toString().split("-");
             System.out.println(songinfo[1]);
 
@@ -94,7 +96,7 @@ public class Panel_Random_Songs extends JPanel implements ActionListener {
     //create list for all songs
     public void createList(){
         try{
-            songs = songDb.notLikedSongs(frame.listener.getListenerid());
+            songs = new ArrayList<>(SongDb.notLikedSongs(frame.listener.getListenerid()));
         }catch (Throwable ex){
             System.out.println("fehler");
         }

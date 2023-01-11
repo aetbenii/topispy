@@ -16,14 +16,14 @@ public class MainFrame extends JFrame{
     Listener listener;
     HibernateUtil hibernateUtil = new HibernateUtil();
     db.SongDb songDb;
-    ArrayList<Song> songs;
+    //ArrayList<Song> songs;
     //ArrayList<Song> likedsongs;
     Panel_Random_Songs random_songs;
     Panel_Input_Data input_data;
     Panel_Rating rating;
     Panel_Favorites favorites;
     Panel_Login login;
-    JPanel cs;
+
 
     public MainFrame() {
         setSize(WIDTH, HEIGHT);
@@ -41,7 +41,7 @@ public class MainFrame extends JFrame{
         login = new Panel_Login(this);
         if(listener != null){
             getContentPane().add(login, BorderLayout.CENTER);
-            songs = songDb.notLikedSongs(listener.getListenerid());
+            //songs = songDb.notLikedSongs(listener.getListenerid());
         }
 
         pack();

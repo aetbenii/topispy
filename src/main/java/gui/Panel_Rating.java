@@ -50,7 +50,9 @@ public class Panel_Rating extends JPanel implements ActionListener {
         if(e.getSource() == upvote){
             if(frame.listener != null){
                 Listener l = listenerDb.getListener(frame.listener.getEmail(), frame.listener.getPassword());
-                lvs = new listener_votes_song(l, Panel_Random_Songs.songs.get(0) , 1, 0);
+                lvs = new listener_votes_song(l, Panel_Random_Songs.songs.get(Panel_Random_Songs.index) , 1, 0);
+                //Panel_Favorites.songs.add(Panel_Random_Songs.songs.get(Panel_Random_Songs.index));
+                Panel_Favorites.addSongToList(Panel_Random_Songs.songs.get(Panel_Random_Songs.index));
                 listenerVotesSongDb.voting(lvs);
                 upvote.setEnabled(false);
                 downvote.setEnabled(false);
@@ -59,7 +61,7 @@ public class Panel_Rating extends JPanel implements ActionListener {
         if(e.getSource() == downvote){
             if(frame.listener != null){
                 Listener l = listenerDb.getListener(frame.listener.getEmail(), frame.listener.getPassword());
-                lvs = new listener_votes_song(l, frame.songs.get(Panel_Random_Songs.index), 0, 1);
+                lvs = new listener_votes_song(l, Panel_Random_Songs.songs.get(Panel_Random_Songs.index), 0, 1);
                 listenerVotesSongDb.voting(lvs);
                 downvote.setEnabled(false);
                 upvote.setEnabled(false);
