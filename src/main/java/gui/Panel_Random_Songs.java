@@ -38,7 +38,7 @@ public class Panel_Random_Songs extends JPanel implements ActionListener {
 
 
         JScrollPane sp = new JScrollPane();
-        sp.setPreferredSize(new Dimension(100, 450));
+        sp.setPreferredSize(new Dimension(100, 575));
         sp.setViewportView(list);
         sp.getVerticalScrollBar().setUI(new BasicScrollBarUI() {
             @Override
@@ -54,7 +54,7 @@ public class Panel_Random_Songs extends JPanel implements ActionListener {
         btn.setBackground(Color.lightGray);
 
         info = new JPanel();
-        info.setPreferredSize(new Dimension(100, 225));
+        info.setPreferredSize(new Dimension(100, 100));
         info.setLayout(new GridLayout(2,1,20,20));
         info.setBackground(Color.white);
         info_song = new ArrayList<>();

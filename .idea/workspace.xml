@@ -4,17 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d3991a1-6c52-441e-aff3-b468b0405d0f" name="Changes" comment="gg">
+    <list default="true" id="7d3991a1-6c52-441e-aff3-b468b0405d0f" name="Changes" comment="benjamin - changes">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/MainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/Panel_Favorites.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Panel_Favorites.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/Panel_Input_Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Panel_Input_Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/Panel_Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Panel_Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/Panel_Random_Songs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Panel_Random_Songs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gui/Panel_Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/Panel_Rating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/logik/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logik/test.java" afterDir="false" />
     </list>
     <list id="1f1d8d28-834c-4a83-8a07-5a53dd00be03" name="Changes by Damian Leiter" comment="Changes by Damian Leiter" />
-    <list id="401c329d-f05f-412c-b370-60529e333851" name="Changes by Kevin" comment="Changes by Kevin" />
-    <list id="d616c0cc-c9a1-4984-bb13-d462fcb36431" name="Changes by Leiter" comment="Changes by Leiter" />
-    <list id="a1493b14-99fe-4a02-912e-4c2909290fa8" name="Changes by Max" comment="Changes by Max" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -29,6 +30,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.jdks/corretto-18.0.2/lib/src.zip!/java.base/java/lang/NoClassDefFoundError.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -208,7 +212,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="projekt erstellt" />

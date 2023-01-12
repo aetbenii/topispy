@@ -28,7 +28,7 @@ public class Panel_Login extends JPanel implements ActionListener {
 
         add(title);
         create_inputs();
-        email.setText("damian@email.com");
+        email.setText("kevin@email.com");
         pw.setText("1234");
 
         btn.addActionListener(this);

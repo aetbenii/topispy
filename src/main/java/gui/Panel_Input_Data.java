@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 public class Panel_Input_Data extends JPanel implements ActionListener {
     ArrayList<JTextField> input = new ArrayList<>();
+    ArrayList<JLabel> lb = new ArrayList<>();
     JButton button = new JButton("Highest Votes");
 
     MainFrame frame;
@@ -17,15 +18,22 @@ public class Panel_Input_Data extends JPanel implements ActionListener {
         this.frame = frame;
         this.setLayout(new FlowLayout(FlowLayout.LEFT));
         //create_inputs();
+        create_lb();
+        setLayout(new GridLayout(1 , 3));
+        lb.get(0).setText("Songs");
 
-        add(button);
+        lb.get(1).setText("Voting");
+
+        lb.get(2).setText("Favourites");
+
+
         button.addActionListener(this);
     }
 
-    public void create_inputs(){
-        for (int i = 0; i < 4; i++) {
-            input.add(new JTextField("",15));
-            add(input.get(i));
+    public void create_lb(){
+        for (int i = 0; i < 3; i++) {
+            lb.add(new JLabel(" ", SwingConstants.CENTER));
+            add(lb.get(i));
         }
     }
 

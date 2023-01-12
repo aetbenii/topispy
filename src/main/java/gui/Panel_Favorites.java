@@ -12,19 +12,24 @@ public class Panel_Favorites extends JPanel {
     public static JList list;
     public static ArrayList<Song> songs;
     public static DefaultListModel model = new DefaultListModel();
+    public JLabel ratefy = new JLabel("Ratefy© ", SwingConstants.RIGHT);
 
     public Panel_Favorites(MainFrame frame){
         this.frame = frame;
         //setBackground(Color.yellow);
         setPreferredSize(new Dimension(frame.WIDTH/3, frame.HEIGHT));
         setLayout(new BorderLayout());
+        //setBackground(Color.white);
 
         createList();
 
         JScrollPane sp = new JScrollPane();
         sp.setViewportView(list);
 
-
+        ratefy.setFont(new Font("", Font.BOLD, 26));
+        ratefy.setForeground(new Color(29, 185, 84));
+        add(ratefy, BorderLayout.SOUTH);
+        //ratefy.setBackground(Color.white);
         add(sp, BorderLayout.CENTER);
     }
 
